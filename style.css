@@ -1,0 +1,660 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fff4f7;
+    color: #55333f;
+    font-family: "Comfortaa", sans-serif;
+    line-height: 1.7;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Декоративные элементы */
+
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: #f8cddc;
+    opacity: 0.35;
+    z-index: -1;
+    filter: blur(5px);
+}
+
+body::before {
+    top: 80px;
+    left: -120px;
+}
+
+body::after {
+    right: -120px;
+    bottom: 50px;
+}
+
+/* Навигация */
+
+nav {
+    width: calc(100% - 40px);
+    max-width: 1100px;
+    margin: 25px auto;
+    padding: 15px 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid #f4d3de;
+    border-radius: 25px;
+
+    box-shadow: 0 10px 30px rgba(157, 86, 111, 0.12);
+    backdrop-filter: blur(10px);
+}
+
+nav a {
+    text-decoration: none;
+    color: #7c4055;
+    font-size: 14px;
+    font-weight: 600;
+
+    padding: 9px 15px;
+    border-radius: 18px;
+
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    background: #f5c5d5;
+    color: #5b2e3e;
+    transform: translateY(-2px);
+}
+
+/* Общие заголовки */
+
+h1,
+h2,
+h3 {
+    font-family: "Playfair Display", serif;
+    color: #7b3f57;
+}
+
+h1 {
+    font-size: 38px;
+    margin-bottom: 18px;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+p {
+    font-size: 16px;
+}
+
+/* Общий стиль блоков */
+
+.education,
+.music,
+.language,
+.it,
+.myinterests,
+.mygoals,
+.teaching-experience,
+.work-experience,
+.frontend-and-web-design,
+.strengths,
+.resume,
+.about-preview,
+.projects-preview,
+.skills-preview,
+.journey,
+.contacts-preview {
+    width: calc(100% - 40px);
+    max-width: 1000px;
+    margin: 35px auto;
+    padding: 40px;
+
+    background: rgba(255, 255, 255, 0.85);
+
+    border: 1px solid #f2d5df;
+    border-radius: 30px;
+
+    box-shadow: 0 15px 40px rgba(157, 86, 111, 0.10);
+
+    transition: 0.35s ease;
+}
+
+.education:hover,
+.music:hover,
+.language:hover,
+.it:hover,
+.myinterests:hover,
+.mygoals:hover,
+.teaching-experience:hover,
+.work-experience:hover,
+.frontend-and-web-design:hover,
+.resume:hover,
+.about-preview:hover,
+.projects-preview:hover,
+.skills-preview:hover,
+.journey:hover,
+.contacts-preview:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 45px rgba(157, 86, 111, 0.16);
+}
+
+/* Главная страница */
+
+.resume {
+    margin-top: 70px;
+    text-align: center;
+    padding: 70px 45px;
+
+    background: linear-gradient(
+        135deg,
+        #f8d8e2,
+        #fff5f7
+    );
+}
+
+.resume h1 {
+    font-size: 48px;
+}
+
+.resume p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* Ссылки-кнопки */
+
+.resume a,
+.about-preview a,
+.projects-preview a,
+.contacts-preview a,
+.project-button {
+    display: inline-block;
+
+    margin-top: 20px;
+    padding: 12px 22px;
+
+    background: #d986a2;
+    color: white;
+
+    text-decoration: none;
+    font-weight: 600;
+
+    border-radius: 25px;
+
+    box-shadow: 0 8px 20px rgba(180, 88, 119, 0.22);
+
+    transition: 0.3s ease;
+}
+
+.resume a:hover,
+.about-preview a:hover,
+.projects-preview a:hover,
+.contacts-preview a:hover,
+.project-button:hover {
+    background: #bd6685;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(180, 88, 119, 0.30);
+}
+
+/* Главная */
+
+.about-preview {
+    background: #fffafc;
+}
+
+.projects-preview {
+    background: #fce8ee;
+}
+
+.skills-preview {
+    background: #fffafc;
+}
+
+.journey {
+    background: linear-gradient(
+        135deg,
+        #fff,
+        #fce2eb
+    );
+}
+
+.contacts-preview {
+    background: #f9d8e3;
+}
+
+/* Страница проектов */
+
+.projects-page,
+.contacts-page {
+    width: calc(100% - 40px);
+    max-width: 1100px;
+    margin: 60px auto;
+}
+
+.projects-page > h1,
+.contacts-page > h1 {
+    text-align: center;
+    font-size: 45px;
+}
+
+.projects-intro {
+    max-width: 750px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+/* Карточки проектов */
+
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #f0cedb;
+    border-radius: 28px;
+
+    box-shadow: 0 12px 30px rgba(157, 86, 111, 0.10);
+
+    transition: 0.35s ease;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-8px) rotate(0.5deg);
+    box-shadow: 0 20px 40px rgba(157, 86, 111, 0.18);
+}
+
+.project-card h2 {
+    color: #9b4f6c;
+}
+
+.project-tech {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #a76a7f;
+    font-weight: 600;
+}
+
+.project-button {
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+/* Сильні сторони */
+
+.strengths {
+    background: #fff8fa;
+}
+
+.strengths h2 {
+    text-align: center;
+}
+
+.strengths-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.strength {
+    padding: 22px;
+
+    background: #fde9ef;
+    border: 1px solid #f3d0dc;
+    border-radius: 22px;
+
+    transition: 0.3s ease;
+}
+
+.strength:hover {
+    background: #f9d5e1;
+    transform: translateY(-4px);
+}
+
+.strength p {
+    font-size: 14px;
+}
+
+/* Контакти */
+
+.contacts-page {
+    text-align: center;
+}
+
+.contacts-page > p {
+    max-width: 700px;
+    margin: 0 auto 35px;
+}
+
+.contact-form,
+.contact-info {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 35px;
+
+    text-align: left;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    border-radius: 30px;
+    border: 1px solid #f0cedb;
+
+    box-shadow: 0 15px 35px rgba(157, 86, 111, 0.10);
+}
+
+.contact-form h2,
+.contact-info h2 {
+    text-align: center;
+}
+
+/* Форма */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 18px;
+    margin-bottom: 7px;
+
+    color: #7c4055;
+    font-weight: 600;
+}
+
+input,
+textarea {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    font-family: "Comfortaa", sans-serif;
+    font-size: 14px;
+
+    border: 1px solid #e9c5d2;
+    border-radius: 15px;
+
+    background: #fff8fa;
+    color: #55333f;
+
+    outline: none;
+
+    transition: 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #d986a2;
+    box-shadow: 0 0 0 4px rgba(217, 134, 162, 0.12);
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    margin-top: 25px;
+    padding: 13px 20px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: #d986a2;
+    color: white;
+
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #bd6685;
+    transform: translateY(-2px);
+}
+
+.contact-info {
+    text-align: center;
+}
+
+.contact-info p {
+    margin: 15px 0;
+}
+
+.contact-info a {
+    color: #b65376;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 35px 20px;
+    margin-top: 60px;
+
+    color: #936477;
+    font-size: 14px;
+}
+
+/* Плавное появление */
+
+.education,
+.music,
+.language,
+.it,
+.myinterests,
+.mygoals,
+.teaching-experience,
+.work-experience,
+.frontend-and-web-design,
+.strength,
+.project-card,
+.contact-form,
+.contact-info {
+    animation: appear 0.7s ease both;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Телефон */
+
+/* =========================
+   АДАПТАЦІЯ ДЛЯ ПЛАНШЕТІВ
+   ========================= */
+
+@media (max-width: 900px) {
+
+    .projects-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================
+   АДАПТАЦІЯ ДЛЯ ТЕЛЕФОНІВ
+   ========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        font-size: 15px;
+    }
+
+    nav {
+        width: calc(100% - 20px);
+        margin: 10px auto;
+        padding: 12px;
+        gap: 6px;
+    }
+
+    nav a {
+        font-size: 13px;
+        padding: 8px 10px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .resume {
+        width: calc(100% - 20px);
+        margin: 25px auto;
+        padding: 45px 20px;
+    }
+
+    .resume h1 {
+        font-size: 32px;
+    }
+
+    .resume p {
+        font-size: 16px;
+    }
+
+    .education,
+    .music,
+    .language,
+    .it,
+    .myinterests,
+    .mygoals,
+    .teaching-experience,
+    .work-experience,
+    .frontend-and-web-design,
+    .strengths,
+    .about-preview,
+    .projects-preview,
+    .skills-preview,
+    .journey,
+    .contacts-preview {
+        width: calc(100% - 20px);
+        padding: 25px 20px;
+    }
+
+    .projects-page,
+    .contacts-page {
+        width: calc(100% - 20px);
+        margin-top: 30px;
+    }
+
+    .projects-list {
+        grid-template-columns: 1fr;
+    }
+
+    .strengths-list {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form,
+    .contact-info {
+        width: 100%;
+        padding: 25px 20px;
+    }
+
+    input,
+    textarea {
+        font-size: 16px;
+    }
+
+    button,
+    .project-button {
+        width: 100%;
+        max-width: 300px;
+    }
+
+}
+
+
+/* =========================
+   ДУЖЕ МАЛЕНЬКИЙ ТЕЛЕФОН
+   ========================= */
+
+@media (max-width: 400px) {
+
+    .resume h1 {
+        font-size: 27px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .resume {
+        padding: 35px 15px;
+    }
+
+}
+
+body {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+body.page-loaded {
+    opacity: 1;
+}
+
